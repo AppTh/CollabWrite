@@ -14,5 +14,5 @@ type:
 
 </p>
 <p>
-open http://localhost:8080 in chrome
+open http://localhost:8080 in chrome.
 </p>
