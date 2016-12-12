@@ -9,7 +9,9 @@ Collaborative Writing
 extract to any directory w/ write permission
 open cmd in that dir
 type:
+<br>
 	npm install
+<br>
 	npm start
 
 </p>
