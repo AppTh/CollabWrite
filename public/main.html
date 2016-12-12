@@ -1,0 +1,53 @@
+<!-- main.html -->
+
+<!-- Assign angular module -->
+<html ng-app="nodeAngularDemo">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/Angular Demo</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+    </style>
+
+    <!-- Script -->
+    <!-- 1.0.8 -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script><!-- load angular -->
+    <!-- provided by node.js at runtime -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- local libraries -->
+    <script src="js/lib/angular-ui-router.min.js"></script>
+    <!-- application specific -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+
+
+</head>
+    <body ng-controller="bodyCtrl">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Collaborative Writing</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li ng-class="{'active':page=='/chat'}"><a ui-sref="chat" >Edit</a></li>
+                    <li ng-class="{'active':page=='/stat'}"><a ui-sref="stat">Browse</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <div ui-view></div>
+
+
+    </body>
+</html>

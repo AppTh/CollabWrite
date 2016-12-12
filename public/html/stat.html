@@ -1,0 +1,42 @@
+<div class="container">
+    <!-- HEADER -->
+    <div class="page-header text-center">
+        <h1>DOCUMENTS <span class="label label-default">{{ stat.documents.length }}</span></h1>
+    </div>
+
+    <!-- DOCUMENT LIST -->
+    <h2>Available documents</h2>
+    <p><strong>Note:</strong> Click <strong>pencil</strong> to edit.</p>
+    <div class="panel-group" id="accordion">
+
+        <div class="panel panel-default" ng-repeat="doc in stat.documents">
+            <div class="panel-heading" ng-click="show=!show">
+                <h4 class="panel-title">
+                    <i class="glyphicon glyphicon-pencil" ng-click="stat.openDoc(doc._id)"></i>
+                    {{doc.title}}
+                    <i class="glyphicon glyphicon-trash pull-right" ng-click="$event.stopPropagation(); stat.removeDoc(doc._id)"></i>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in" ng-show="show">
+                <div class="panel-body">Author: {{doc.author}} | Created: {{doc.created}}</div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- NEW DOC FORM -->
+        <form class="form-inline">
+            Create new document
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Title" ng-model="stat.newTitle">
+                    <div class="input-group-addon btn btn-success" ng-click="stat.newDoc()">Create</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

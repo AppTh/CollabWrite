@@ -1,0 +1,28 @@
+<div class="container">
+
+    <!-- TODO: Remove all todos and chats-->
+
+    <!-- HEADER AND TODO COUNT -->
+    <div class="page-header text-center">
+        <h1>Title: {{chat.title}} <span class="label label-info">{{ chat.theText.length }}</span></h1>
+
+    </div>
+
+    <div class="col-sm-12">
+        Connected Clients<br>
+        <div ng-repeat="client in chat.connectedClients">
+            <span class="client-tag">{{client}}</span>
+            <br>
+        </div>
+    </div>
+
+    <!-- Text Area -->
+    <div id="textArea" class="row">
+        <div class="col-sm-12">
+
+            <textarea rows="24" type="text" class="form-control" on-text-change="chat.textChange" tracked-text-field update="chat.updateDir"></textarea>
+
+        </div>
+    </div>
+
+</div>

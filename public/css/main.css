@@ -1,0 +1,19 @@
+html{
+overflow-y:scroll;
+}
+
+.input-group-addon.btn{
+    color: #000000;
+}
+
+.page-header{
+    margin-top: 0;
+}
+
+
+.client-tag{
+    padding: 1px;
+    border-radius: 4px;
+    margin: 16px;
+    background-color: #8BC34A;
+}
